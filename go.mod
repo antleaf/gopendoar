@@ -1,4 +1,4 @@
-module gopendoar
+module github.com/antleaf/gopendoar
 
 go 1.19
 

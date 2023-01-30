@@ -1,9 +1,9 @@
 package cmd
 
 import (
+	"github.com/antleaf/gopendoar/api"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
-	api "gopendoar/src/api"
 	"gopkg.in/yaml.v3"
 	"os"
 )

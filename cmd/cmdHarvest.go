@@ -1,8 +1,8 @@
 package cmd
 
 import (
+	"github.com/antleaf/gopendoar/api"
 	"github.com/spf13/cobra"
-	api "gopendoar/src/api"
 )
 
 var harvestCmd = &cobra.Command{
