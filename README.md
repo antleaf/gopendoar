@@ -1,7 +1,7 @@
 # GOpenDOAR
 Simple (Golang) harvesting client for OpenDOAR.
 
-[OpenDOAR](https://v2.sherpa.ac.uk/opendoar/) is a directory of open-access repositories, maintained by Jisc.
+[OpenDOAR](https://v2.sherpa.ac.uk/opendoar/) is a directory of open-access repositories, maintained by Jisc. This client harvests metadata records from OpenDOAR in JSON format and writes them to a local folder as JSON files. 
 
 ### Instructions
 
