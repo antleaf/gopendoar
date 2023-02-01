@@ -1,0 +1,6 @@
+opendoar:
+  harvestDataFolderPath: "./data/harvest" #this is the path to the local folder where the harvested data should be written - it will be created if it does not already exist
+  harvestPageLimit: 80 #if you want to harvest all the records then set this to a very high number - the process will terminate anyway once all records have been harvested
+  harvestPageSize: 100 #the number of records in a file. Default is 100
+  apiBaseURL: "https://v2.sherpa.ac.uk/cgi/retrieve"
+  apiKeyENVKey: "OPENDOAR_API_KEY" #name of a local ENV variable containing your API key for OpenDOAR.

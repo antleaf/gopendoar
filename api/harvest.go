@@ -26,7 +26,12 @@ func Harvest(itemType string, format string) {
 				logger.Error(err.Error())
 			}
 			if list.IsEmpty() == false {
-				list.MarshallToFile(filepath.Join(config.HarvestDataFolderPath, fmt.Sprintf("%d.json", page)))
+				filePath := filepath.Join(config.HarvestDataFolderPath, fmt.Sprintf("%d.json", page))
+				logger.Debugf("Writing file... %s", filePath)
+				err = list.MarshallToFile(filePath)
+				if err != nil {
+					logger.Error(err.Error())
+				}
 			} else {
 				logger.Infof("Reached the end of the results, halting.")
 				return

@@ -25,7 +25,7 @@ func (l *APIRepositoryItemList) MarshallToFile(filePath string) error {
 		return err
 	}
 	defer file.Close()
-	file.Write(out)
+	_, err = file.Write(out)
 	return err
 }
 
