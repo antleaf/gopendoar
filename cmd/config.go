@@ -8,10 +8,12 @@ import (
 	"os"
 )
 
+// Configuration is the configuration for the application
 type Configuration struct {
 	APIConfig api.APIConfiguration `yaml:"opendoar"`
 }
 
+// Initialise initialises the application configuration
 func (config *Configuration) Initialise(configFilePath string) error {
 	configData, err := os.ReadFile(configFilePath)
 	if err != nil {
@@ -24,6 +26,7 @@ func (config *Configuration) Initialise(configFilePath string) error {
 	return err
 }
 
+// ConfigureZapSugarLogger configures the zap logger as a zap.SugaredLogger and returns a pointer to the logger and an error
 func ConfigureZapSugarLogger(debugging bool) (*zap.SugaredLogger, error) {
 	var zapLogger *zap.Logger
 	var err error
@@ -31,6 +34,7 @@ func ConfigureZapSugarLogger(debugging bool) (*zap.SugaredLogger, error) {
 	return zapLogger.Sugar(), err
 }
 
+// ConfigureZapLogger configures the zap logger and returns a pointer to the logger and an error
 func ConfigureZapLogger(debugging bool) (*zap.Logger, error) {
 	level := zapcore.InfoLevel
 	encoderConfig := zapcore.EncoderConfig{

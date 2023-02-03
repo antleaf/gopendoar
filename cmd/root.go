@@ -17,6 +17,7 @@ var rootCmd = &cobra.Command{
 	Short: "A simple harvest client for OpenDOAR",
 }
 
+// Execute executes the root command
 func Execute() {
 	err := rootCmd.Execute()
 	if err != nil {
@@ -24,6 +25,7 @@ func Execute() {
 	}
 }
 
+// init() is called before the command is executed
 func init() {
 	rootCmd.PersistentFlags().BoolVarP(&Debug, "debug", "", false, "--debug=true|false")
 	rootCmd.PersistentFlags().StringVarP(&ConfigPath, "config", "", "./config/config.yaml", "--config=<file_path>")

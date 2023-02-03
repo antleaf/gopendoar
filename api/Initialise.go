@@ -1,3 +1,4 @@
+// Package api provides datastructures and functions to interface with the OpenDOAR API
 package api
 
 import (
@@ -8,6 +9,7 @@ import (
 var logger *zap.SugaredLogger
 var config APIConfiguration
 
+// InitialiseAPI initialises the API package
 func InitialiseAPI(apiConfig APIConfiguration, l *zap.SugaredLogger) {
 	logger = l
 	config = apiConfig

@@ -5,7 +5,8 @@ import (
 	"os"
 )
 
-func initialiseApplication() {
+// InitialiseApplication initialises the application
+func InitialiseApplication() {
 	err := (&config).Initialise(ConfigPath)
 	if err != nil {
 		fmt.Print(err.Error() + "\n")

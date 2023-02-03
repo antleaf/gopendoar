@@ -1,5 +1,6 @@
 package api
 
+// APIConfiguration is the configuration for the API package
 type APIConfiguration struct {
 	HarvestDataFolderPath string `yaml:"harvestDataFolderPath"`
 	HarvestPageSize       int    `yaml:"harvestPageSize"`

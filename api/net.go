@@ -8,6 +8,7 @@ import (
 	"time"
 )
 
+// NewGetClient returns a new Gentleman (HTTP) client with a GET request
 func NewGetClient() *gentleman.Client {
 	cli := gentleman.New()
 	cli.Use(redirect.Limit(3))
@@ -18,6 +19,7 @@ func NewGetClient() *gentleman.Client {
 	return cli
 }
 
+// APIGet performs a GET request on the given URL and returns the status code, body and error
 func APIGet(cli *gentleman.Client, url string) (int, []byte, error) {
 	var err error
 	RandomSleep(2)
@@ -35,6 +37,7 @@ func APIGet(cli *gentleman.Client, url string) (int, []byte, error) {
 	return resp.StatusCode, resp.Bytes(), err
 }
 
+// RandomSleep sleeps for a random number of seconds up to the given number
 func RandomSleep(longest int) {
 	rand.Seed(time.Now().UnixNano())
 	n := rand.Intn(longest) // n will be between 0 and longest
